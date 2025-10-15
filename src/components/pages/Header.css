@@ -1,0 +1,160 @@
+.header{
+    position: fixed;
+    top: 0;
+    width: 100%; 
+    background-color: #0b0b0b;
+    color: white;
+    padding: 15px 40px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    transition: top 0.4s ease, opacity 0.4s ease;
+}
+
+.logo{
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #e50914;
+    cursor: pointer;
+    margin-left: 25px;
+    margin-right: 20px;
+}
+
+.header-left{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-left nav{
+    display: flex;
+    gap: 15px;
+}
+
+.header-left nav button{
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.header-left nav button:hover{
+    color: #e50914;
+}
+
+.header-right{
+    display: flex;
+    align-items: center;
+}
+
+.search-icon{
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.search-form{
+    display: flex;
+    align-items: center;
+    background: #141414;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.search-form input{
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+}
+
+.search-form button{
+    background: #e50914;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search-form button:hover{
+    background: #b00610;
+}
+
+.header.scrolled{
+    background-color: rgba(0, 0, 0, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.header.hidden{
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.header:not(.hidden){
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@media (max-width: 700px){
+    .header{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px 0;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .header-left{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .logo{
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #e50914;
+        margin-bottom: 6px;
+        letter-spacing: 1px;
+    }
+
+    .header-left nav{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 10px;
+    }
+
+    
+
+    .header-right{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .search-icon{
+        background: transparent;
+        border: none;
+        color: white;
+        font-size: 1.4rem;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        margin-top: 5px;
+    }
+
+    .search-icon:hover{
+        transform: scale(1.2);
+    }
+}

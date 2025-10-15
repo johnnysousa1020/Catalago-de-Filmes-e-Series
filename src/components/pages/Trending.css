@@ -1,0 +1,87 @@
+.trending-page{
+    padding: 20px;
+    color: #fff;
+    min-height: 100vh;
+    padding-top: 7%;
+    background: #0b0b0b;
+}
+
+.trending-page h1{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.trending-section{
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.trending-section h2{
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+    border-left: 4px solid #e50914;
+    padding-left: 10px;
+}
+
+.carousel-trending{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.trending-grid{
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.trending-grid::-webkit-scrollbar{
+    display: none;
+}
+
+.scroll-btntrending{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 2;
+    padding: 8px 12px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.scroll-btntrending:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    color: black;
+}
+
+.scroll-btntrending.left{
+    left: 5px;
+}
+
+.scroll-btntrending.right{
+    right: 5px;
+}
+
+@media (max-width: 600px){
+    .trending-page{
+        margin-top: 30%;
+    }
+
+    .scroll-btntrending{
+        display: none;
+    }
+
+    .trending-grid{
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+    }
+}

@@ -1,0 +1,122 @@
+.details{
+    position: relative;
+    background-color: #141414;
+    color: #fff;
+    height: 100vh;
+    overflow: hidden; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.details-banner{
+    position: absolute;
+    inset: 0; 
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.6);
+}
+
+.overlay{
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.4) 30%, rgba(0,0,0,0.2)); 
+    z-index: 1;
+}
+
+.content{
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.content h1{
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    padding: 20px;
+}
+
+.content p{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #ddd;
+    padding: 20px;
+}
+
+.buttons{
+    margin-bottom: 20px;
+}
+
+.buttons button{
+    background-color: #e50914;
+    border: none;
+    color: #fff;
+    padding: 10px 18px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.buttons button:hover{
+    opacity: 0.8;
+}
+
+.providers{
+    margin-top: 15px;
+    color: #fff;
+    padding: 20px;
+}
+
+.providers strong{
+    display: block;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.providers ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.providers li{
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: 0.3s;
+    margin-top: 8px;
+}
+
+.provider.netflix{
+    background-color: #e50914;
+    color: white;
+}
+
+.providers.hbo, .provider.max{
+    background-color: #6b11c5;
+    color: white;
+}
+
+.providers.prime{
+    background-color: #00a8e1;
+    color: white;
+}
+
+.provider.disney{
+    background-color: #113ccf;
+    color: white;
+}
+
+.providers li:hover{
+    transform: scale(1.05);
+    cursor: default;
+}
