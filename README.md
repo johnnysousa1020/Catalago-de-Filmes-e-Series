@@ -1,16 +1,45 @@
-# React + Vite
+# 🎬 Catálogo de Filmes e Séries
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao **Catálogo de Filmes e Séries**! 
+um site interativo que permite aos usuários explorar filmes e 
+séries, ver detalhes, descobrir onde assistir e salvar seus 
+titulos favoritos.
+o projeto foi desenvolvido com **React.js** e consome 
+dados da **API do TMDB (The Movie Detabase)**.
 
-Currently, two official plugins are available:
+# **Acesse o projeto online:**
+[https://finestshop.shop/](https://finestshop.shop/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Tecnologias Utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React.js** → Framework principal do frontend
+- **JavaScript (ES6+)** → Linguagem base do projeto
+- **CSS3** → Estilização do layout e responsividade
+- **Axios** → Resquisições HTTP
+- **Vite** → Ferramenta de build e desenvolvimento rápido
+- **TMDB API** → Fonte dos dados de filmes e séries
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Funcionalidade
+
+✅ Pesquisa de filmes e séries
+✅ Exibição de informações detalhadas (nome, sinopse, avaliação etc.)
+✅ Seção de filmes e séries populares, em cartaz e bem avaliados
+✅ Página de favoritos ("Minha Lista")
+✅ Indicação de onde assistir (Streamings disponíveis)
+✅ Layout totalmente **Responsivo**
+✅ Cabeçalho inteligente que desaparece e reaparece ao rolar a tela
+
+---
+
+## Estrutura do Projeto
+
+src/|---components/#Componentes reutilizáveis
+(Header, Banner, etc.)|--- pages/# Páginas principais
+(Home, Movies, Series, etc.)|--- App.jsx # Componente
+principal da aplicação|--- App.css #Estilo global|---
+main.jsx #Ponto de entrada do React|--- tmdb.js 
+# Configuração e funções da API TMDB.
