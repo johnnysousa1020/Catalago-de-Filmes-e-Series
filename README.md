@@ -43,3 +43,22 @@ src/|---components/#Componentes reutilizáveis
 principal da aplicação|--- App.css #Estilo global|---
 main.jsx #Ponto de entrada do React|--- tmdb.js 
 # Configuração e funções da API TMDB.
+
+---
+
+## Aprendizados
+
+Durante o desenvolvimento, aprimorei meus conhecimentos em:
+- Integração com APIs externas (TMDB)
+- Organização de componentes em React
+- Boas práticas de responsividade
+- Estruturação de projetos com Vite
+
+---
+
+## Autor
+
+**Johnny Sousa**
+Desenvolvedor Front-End
+Contato: [trabalhosouza567@gmail.com]
+[finestshop.shop](https://finestshop.shop/)
