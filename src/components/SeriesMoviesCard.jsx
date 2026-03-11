@@ -61,7 +61,7 @@ function SeriesMoviesCard({ item, type }){
                 <button onClick={handleShowTrailer}>Trailer</button>
                 </div>
                 <div className="card-buttons-dois">
-                <button onClick={handleAddToList}>{inList ? "X Remover da Lista" : "+ Minha Lista"}</button>
+                <button onClick={handleAddToList}>{inList ? "X Remover" : "+ Minha Lista"}</button>
                 </div>
                 {trailerKey && (
                     <TrailerModal 

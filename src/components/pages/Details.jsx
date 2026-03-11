@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./Details.css"
 
-const IMG_URL = "https://image.tmdb.org/t/p/w500";
+const IMG_URL = "https://image.tmdb.org/t/p/w1280";
 const BASE_URL = "https://api.themoviedb.org/3";
 const API_KEY = "c76bad2263fc16cba9d6e7783c91c00b";
 
@@ -67,9 +67,9 @@ function Details(){
             >
                 <div className="overlay"/>
                 <div className="content">
-                    <div className="buttons">
+                    <div className="buttonsss">
                         <button onClick={() => navigate(-1)}>Voltar</button>
-                        <button onClick={handleAddToList}>{inList ? "X Remover da Lista" : "+ Minha Lista"}</button>
+                        <button onClick={handleAddToList}>{inList ? "X Remover" : "+ Minha Lista"}</button>
                         <button onClick={() => navigate("/my-list")}>Ver Minha Lista</button>
                     </div>
 
@@ -77,11 +77,11 @@ function Details(){
                     <p>{item.overview || "Sem descrição disponivel"}</p>
 
                     <p>
-                        <strong>Data de Lançamento:</strong>{""}
+                        <strong>Data de Lançamento: </strong>{""}
                         {item.release_date || item.first_air_date}
                     </p>
                     <p>
-                        <strong>Nota:</strong>{item.vote_average}/10
+                        <strong>Nota: </strong>{item.vote_average}/10
                     </p>
                     
                 <div className="providers">

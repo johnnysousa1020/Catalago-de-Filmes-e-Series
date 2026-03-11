@@ -4,6 +4,7 @@
     height: 500px;
     position: relative;
     margin-top: 40px;
+    transition: background-image 0.8s ease-in-out;
 }
 
 .banner-content{
