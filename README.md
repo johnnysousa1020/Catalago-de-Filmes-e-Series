@@ -7,10 +7,10 @@ titulos favoritos.
 o projeto foi desenvolvido com **React.js** e consome 
 dados da **API do TMDB (The Movie Detabase)**.
 
-# **Acesse o projeto online:**
+## **Acesse o projeto online:**
 [https://finestshop.shop/](https://finestshop.shop/)
 
-# **Acesse o projeto pelo Github Pages**
+## **Acesse o projeto pelo Github Pages**
 https://johnnysousa1020.github.io/Catalago-de-Filmes-e-Series/
 
 ---
