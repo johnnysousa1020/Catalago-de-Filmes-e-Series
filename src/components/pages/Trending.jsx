@@ -3,6 +3,8 @@ import axios from "axios";
 import SeriesMoviesCard from "../SeriesMoviesCard";
 import "./Trending.css"
 
+const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
+
 function Trending(){
     const [trendingMovies, setTrendingMovies] = useState([])
     const [trendingSeries, setTrendingSeries] = useState([])
@@ -14,10 +16,10 @@ function Trending(){
             try{
                 const [moviesResponse, seriesResponse] = await Promise.all([
                     axios.get(
-                `https://api.themoviedb.org/3/trending/movie/week?api_key=c76bad2263fc16cba9d6e7783c91c00b&language=pt-BR`
+                `https://api.themoviedb.org/3/trending/movie/week?api_key=${API_KEY}&language=pt-BR`
                     ),
                     axios.get(
-                `https://api.themoviedb.org/3/trending/tv/week?api_key=c76bad2263fc16cba9d6e7783c91c00b&language=pt-BR`
+                `https://api.themoviedb.org/3/trending/tv/week?api_key=${API_KEY}&language=pt-BR`
                     ),
                 ])
 

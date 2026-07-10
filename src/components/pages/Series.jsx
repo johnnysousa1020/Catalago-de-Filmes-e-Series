@@ -40,7 +40,7 @@ function Series(){
             <button className="arons left" onClick={() => scrollLeftt(populaRef)}>←</button>
             <div className="rowe" ref={populaRef}>
                 {popular.map((serie) => (
-                    <SeriesMoviesCard key={serie.id} item={serie} type="serie"/>
+                    <SeriesMoviesCard key={serie.id} item={serie} type="tv"/>
                 ))}
             </div>
             <button className="arons right" onClick={() => scrollRightt(populaRef)}>→</button>
@@ -51,7 +51,7 @@ function Series(){
             <button className="arons left" onClick={() => scrollLeftt(topRateddRef)}>←</button>
             <div className="rowe" ref={topRateddRef}>
                 {topRated.map((serie) => (
-                    <SeriesMoviesCard key={serie.id} item={serie} type="serie"/>
+                    <SeriesMoviesCard key={serie.id} item={serie} type="tv"/>
                 ))}
             </div>
             <button className="arons right" onClick={() => scrollRightt(topRateddRef)}>→</button>
@@ -62,7 +62,7 @@ function Series(){
             <button className="arons left" onClick={() => scrollLeftt(onAirRef)}>←</button>
             <div className="rowe" ref={onAirRef}>
                 {onAir.map((serie) => (
-                    <SeriesMoviesCard key={serie.id} item={serie} type="serie"/>
+                    <SeriesMoviesCard key={serie.id} item={serie} type="tv"/>
                 ))}
             </div>
             <button className="arons right" onClick={() => scrollRightt(onAirRef)}>→</button>

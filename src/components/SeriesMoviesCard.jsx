@@ -3,8 +3,9 @@ import { useNavigate } from "react-router-dom";
 import TrailerModal from "./TrailerModal";
 
 const IMG_URL = "https://image.tmdb.org/t/p/w200"
+const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
 
-function SeriesMoviesCard({ item, type }){
+function SeriesMoviesCard({ item, type, showButtons = true }){
     const navigate = useNavigate();
     const [inList, setlnList] = useState(false)
     const [trailerKey, setTrailerKey] = useState(null)
@@ -34,7 +35,7 @@ function SeriesMoviesCard({ item, type }){
     const handleShowTrailer = async () => {
         try{
             const response = await fetch(
-                `https://api.themoviedb.org/3/${type}/${item.id}/videos?api_key=c76bad2263fc16cba9d6e7783c91c00b&language=pt-BR`
+                `https://api.themoviedb.org/3/${type}/${item.id}/videos?api_key=${API_KEY}&language=pt-BR`
             )
             const data = await response.json()
 
@@ -56,13 +57,19 @@ function SeriesMoviesCard({ item, type }){
         <div className="series-cards">
             <img src={`${IMG_URL}${item.poster_path}`} alt={item.title || item.name} />
             <p>{item.title || item.name}</p>
+
+            {showButtons && (
+                <>
             <div className="card-buttons">
                 <button onClick={() => navigate(`/details/${type}/${item.id}`)}>info</button>  
                 <button onClick={handleShowTrailer}>Trailer</button>
-                </div>
-                <div className="card-buttons-dois">
+            </div>
+            <div className="card-buttons-dois">
                 <button onClick={handleAddToList}>{inList ? "X Remover" : "+ Minha Lista"}</button>
-                </div>
+            </div>
+                </>
+                )}
+
                 {trailerKey && (
                     <TrailerModal 
                     trailerKey={trailerKey}
